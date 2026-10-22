@@ -23,11 +23,15 @@ Before 1.0.0 (`0.y.z`), the public API isn't stable yet. A breaking change bumps
 Every release:
 
 - is tagged `vX.Y.Z` (for example `v1.4.2`)
-- has an entry in `CHANGELOG.md` in [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) format (`Added`, `Changed`, `Deprecated`, `Removed`, `Fixed`, `Security`), with an `Unreleased` section kept up to date in each PR.
+- has an entry in `CHANGELOG.md` in [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) format (`Added`, `Changed`, `Deprecated`, `Removed`, `Fixed`, `Security`).
+
+### Who decides the version
+
+Contributors don't pick version numbers or edit the changelog. Just describe what your PR changes and answer the template's question about whether it changes how the artifact API or MCP behaves. The maintainers decide the major, minor or patch bump and write the changelog entry when they cut a release.
 
 ### Artifact API and MCP
 
-The artifact API and the MCP tool interfaces are public contracts. Any **breaking** change to them is a **MAJOR** bump (from 1.0.0 onward; before 1.0, a MINOR bump with the break called out). PRs that touch either must tick the "Affects the artifact API or MCP?" box in the PR template and include migration notes.
+The artifact API and the MCP tool interfaces are public contracts. Any **breaking** change to them is a **MAJOR** bump (from 1.0.0 onward; before 1.0, a MINOR bump with the break called out). If your PR changes how either behaves, say so in the PR template and include migration notes, so the maintainers can version the release correctly.
 
 ## Code review
 

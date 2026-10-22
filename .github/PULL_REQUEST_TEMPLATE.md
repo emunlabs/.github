@@ -6,14 +6,10 @@
 
 <!-- e.g. Closes #123 / ROG-1234 -->
 
-## SemVer impact (required, pick one)
+## Does this change how the artifact API or MCP behaves?
 
-- [ ] major: breaking change
-- [ ] minor: new backwards-compatible feature
-- [ ] patch: backwards-compatible fix
-- [ ] none: no release impact (docs, CI, internal)
-
-- [ ] **Affects the artifact API or MCP?** If yes and the change is breaking, the SemVer bump above **must be major**.
+- [ ] No
+- [ ] Yes (describe what changes for callers, and add migration notes below)
 
 ## Type of change
 
@@ -23,7 +19,6 @@
 - [ ] refactor
 - [ ] test
 - [ ] chore / CI
-- [ ] breaking change
 
 ## Tests run
 
@@ -31,7 +26,6 @@
 
 ## Checklist
 
-- [ ] CHANGELOG updated (Keep a Changelog, `Unreleased` section)
 - [ ] Docs updated
 - [ ] No secrets or private/real company data (RM or Emun) committed
-- [ ] Breaking changes are described with migration notes
+- [ ] Any change in behavior for callers is described, with migration notes
