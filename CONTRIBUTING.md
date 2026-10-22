@@ -73,3 +73,7 @@ Every release is tagged `vX.Y.Z` (for example `v1.4.2`) and gets a `CHANGELOG.md
 - Each repo's own `LICENSE` file governs.
 - Unless a repo says otherwise, its code is **proprietary to Emun Labs, Inc.**
 - Keep third-party license notices and any `NOTICE` / third-party files up to date.
+
+---
+
+The layout of this guide follows the [GitHub Docs contributing guide](https://github.com/github/docs/blob/main/.github/CONTRIBUTING.md) (CC BY 4.0).
