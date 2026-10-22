@@ -6,7 +6,7 @@
 
 <!-- e.g. Closes #123 / ROG-1234 -->
 
-## Does this change how the artifact API or MCP behaves?
+## Does this change how the artifact API or MCP behaves? (skip if this repo has neither)
 
 - [ ] No
 - [ ] Yes (describe what changes for callers, and add migration notes below)
