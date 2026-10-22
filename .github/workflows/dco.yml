@@ -1,0 +1,48 @@
+# OPT-IN, for open-source repos only. The org defaults don't require the DCO.
+# Open-source repos that use the DCO opt in by calling this workflow (below)
+# or by installing the DCO GitHub App. Closed-source repos don't use it.
+#
+# DCO check: fails a pull request if any commit lacks a Signed-off-by trailer.
+# This file is a reusable workflow. Repos call it from their own workflow:
+#
+#   on: pull_request
+#   jobs:
+#     dco:
+#       uses: emunlabs/.github/.github/workflows/dco.yml@main
+#
+# Alternatively, install the DCO GitHub App on the repo.
+name: DCO
+
+on:
+  workflow_call:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  dco:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha }}
+      - name: Check Signed-off-by trailers
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          set -euo pipefail
+          missing=0
+          for c in $(git rev-list --no-merges "$BASE_SHA..$HEAD_SHA"); do
+            if ! git log -1 --format=%B "$c" | grep -qiE '^Signed-off-by: .+ <.+>$'; then
+              echo "::error::Commit $c is missing a Signed-off-by trailer"
+              missing=1
+            fi
+          done
+          if [ "$missing" -ne 0 ]; then
+            echo "Sign off each commit with 'git commit -s' (see https://developercertificate.org/)."
+            exit 1
+          fi
+          echo "All commits are signed off."
