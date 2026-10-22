@@ -1,3 +1,7 @@
+# OPT-IN, for open-source repos only. The org defaults don't require the DCO.
+# Open-source repos that use the DCO opt in by calling this workflow (below)
+# or by installing the DCO GitHub App. Closed-source repos don't use it.
+#
 # DCO check: fails a pull request if any commit lacks a Signed-off-by trailer.
 # This file is a reusable workflow. Repos call it from their own workflow:
 #

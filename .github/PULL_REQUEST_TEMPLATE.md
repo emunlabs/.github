@@ -35,4 +35,3 @@
 - [ ] Docs updated
 - [ ] No secrets or private/real company data (RM or Emun) committed
 - [ ] Breaking changes are described with migration notes
-- [ ] **(required)** All commits are signed off with `git commit -s` under the DCO and Apache-2.0

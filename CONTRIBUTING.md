@@ -1,10 +1,10 @@
 # Contributing to Emun Labs
 
-Every `emunlabs` repository uses these defaults unless it has its own `CONTRIBUTING.md`.
+Every `emunlabs` repository uses these defaults unless it has its own `CONTRIBUTING.md`. **Each repo's own `LICENSE` and `CONTRIBUTING` govern** and take precedence over this file.
 
 ## Workflow
 
-1. Members create a branch in the repo. Outside contributors fork it first.
+1. Members create a branch in the repo. Outside contributors fork it first, and only where the repo says it accepts outside contributions.
 2. Name branches `<type>/<short-description>`, for example `feat/artifact-upload`, `fix/manifest-hash` or `docs/delivery-overview`. If there's a tracker ID, include it, for example `ROG-1234-short-description`.
 3. Keep each PR small and focused on one change. Split unrelated work into separate PRs.
 4. Tests are required. New behavior needs tests, and bug fixes need a test that reproduces the bug. CI must pass.
@@ -46,14 +46,8 @@ The artifact API and the MCP tool interfaces are public contracts. Any **breakin
 - **TypeScript is only for the browser.** Don't write new backend services in Node/TypeScript.
 - Any exception needs to be recorded and approved.
 
-## License and DCO
+## License
 
-- Emun's own code is licensed under **Apache-2.0**.
-- Keep third-party license notices, such as existing MIT notices, and keep `NOTICE` / third-party files up to date.
-- Contributions come in under Apache-2.0 through the [Developer Certificate of Origin (DCO)](https://developercertificate.org/). Sign off every commit:
-
-  ```sh
-  git commit -s -m "feat: add thing"
-  ```
-
-  This adds a `Signed-off-by: Your Name <you@example.com>` trailer. The DCO is enforced server-side by the `dco` workflow (or the DCO GitHub App). Don't rely on local git hooks.
+- Each repo's own `LICENSE` file governs.
+- Unless a repo says otherwise, its code is **proprietary to Emun Labs, Inc.** and doesn't accept outside contributions.
+- Keep third-party license notices and keep any `NOTICE` / third-party files up to date.
