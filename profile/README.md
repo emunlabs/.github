@@ -51,6 +51,17 @@ Emun is in private build. Developer documentation is coming soon, and our first 
 
 This [`.github`](https://github.com/emunlabs/.github) repository holds the defaults every Emun repository inherits: the [contributing guide](https://github.com/emunlabs/.github/blob/main/CONTRIBUTING.md), pull request and issue templates, and an opt-in DCO check. A repository's own `LICENSE` and `CONTRIBUTING` take precedence.
 
+### Security
+
+Found a vulnerability? Please report it privately to **security@emunlabs.com**. Please don't open a public issue.
+
+To encrypt your report, use our PGP key:
+
+- Fingerprint: `B47E 9F58 829D A2E5 3E7F  8B74 3816 94AE 61AD 7421`
+- Public key: [security-emunlabs-pubkey.asc](https://github.com/emunlabs/.github/blob/main/security-emunlabs-pubkey.asc)
+
+See our [security policy](https://github.com/emunlabs/.github/blob/main/SECURITY.md) for scope and what to expect.
+
 ---
 
 [emunlabs.com](https://emunlabs.com) &nbsp;·&nbsp; [hello@emunlabs.com](mailto:hello@emunlabs.com)
